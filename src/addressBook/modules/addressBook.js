@@ -45,11 +45,20 @@ App.module('AddressBook', function(AddressBook, App, Backbone, Mn, $, _){
 
             var model = this.contacts.get(email);
 
-            var editItemView = new App.Views.ContactEditView({
-                model: model
-            });
+            if (model) {
+                var editItemView = new App.Views.ContactEditView({
+                    model: model
+                });
 
-            App.contactFormRegion.show(editItemView);
+                App.contactFormRegion.show(editItemView);
+            }
+            else {
+                var notFoundView = new App.Views.ContactNotFoundView({
+                    model: new Backbone.Model({email: email})
+                });
+                App.contactFormRegion.show(notFoundView);
+            }
+
             App.contactFormRegion.$el.fadeIn();
         },
 
