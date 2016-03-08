@@ -1,0 +1,95 @@
+/* Bootstrap page */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+/* Hover button */
+.list-group-hover .list-group-item .hover-btn {
+  display: none;
+}
+
+.list-group-hover .list-group-item:hover .hover-btn {
+  display: block;
+  right: 10px;
+  position: absolute;
+}
+
+/* Hover list-group-item */
+.list-group-hover .list-group-item:hover,
+.list-group-hover .list-group-item:focus {
+  color: #555;
+  background-color: #f5f5f5;
+}
+
+/* Contact empty */
+.ctc-empty { margin-bottom: 0; }
+
+/* typeahead input */
+.typeahead.form-control[readonly] {
+  background-color: inherit;
+  opacity: 1;
+}
+
+/* Confirmation inline */
+.inline-block {
+  display: inline-block;
+}

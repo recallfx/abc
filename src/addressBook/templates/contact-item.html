@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <h4 class="list-group-item-heading">
+            <span class="flag-icon <%='flag-icon-' + countryCode.toLowerCase() %>" title="<%=country %>"></span>
+            <span class="ctc-full-name"><%=firstName %> <%=lastName %></span>
+        </h4>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+        <span class="ctc-email"><%=email %></span>
+    </div>
+
+    <div class="hover-btn pull-right">
+        <a  href="<%='#edit/'+email %>" class="item-edit btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span></a>
+        <button class="item-remove btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+    </div>
+</div>
+

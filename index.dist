@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Address Book Challenge</title>
+    <meta name="description" content="Address Book Challenge single page JavaScript application">
+
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="#">Contacts List</a></li>
+                <li role="presentation"><a href="#about">About</a></li>
+
+                <li role="presentation" class="dropdown">
+                    <a href="#cog" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#import">Import</a></li>
+                        <li><a href="#export">Export</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">Address Book</h3>
+    </div>
+
+    <div id="addressBook">
+        <div id="contactsRegion" style="display:none"></div>
+        <div id="contactFormRegion" style="display:none"></div>
+
+        <div id="importPageRegion" style="display:none">
+            <div class="jumbotron">
+                <h1>Import</h1>
+                <p class="lead">Import address book data from JSON file.</p>
+                <p><input type="file" id="ctc-file"></p>
+            </div>
+        </div>
+
+        <div id="exportPageRegion" style="display:none">
+            <div class="jumbotron">
+                <h1>Export data</h1>
+                <p class="lead">Export address book data to JSON file.</p>
+                <p><a id="ctc-export" class="btn btn-lg btn-success" href="#" role="button" download="addressBook.json">Export</a></p>
+            </div>
+        </div>
+
+        <div id="aboutPageRegion" style="display:none">
+            <div class="jumbotron">
+                <h1>About</h1>
+                <p class="lead">Address Book Challenge - single page JavaScript application</p>
+                <p><a class="btn btn-lg btn-success" href="https://github.com/recallfx/abc" role="button">Project on GitHub</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2016 Marius Bieliauskas</p>
+    </footer>
+
+</div>
+
+<script src="js/templates.min.js"></script>
+<script src="js/scripts.min.js"></script>
+
+<script type="text/javascript">
+    $(window).load(function () {
+        // App
+        App.start();
+        App.startSubApp('AddressBook');
+    });
+</script>
+
+</body>
+</html>
