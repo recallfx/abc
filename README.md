@@ -1,6 +1,6 @@
 # Address book challenge SPA
 
-## Global dependencies (NodeJs 4.x / NodeJs 5.x)
+## Global dependencies
 
 ```
 $ npm install -g gulp-cli casperjs phantomjs-prebuilt
